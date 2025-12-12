@@ -1,8 +1,9 @@
 import random
-from typing import Dict, List
-from people import People
-import constants
 from pprint import pprint
+from typing import Dict, List
+
+import constants
+from people import People
 
 
 def random_choice(values: List[str]) -> str:
@@ -14,6 +15,7 @@ def generate_row() -> People:
         first_name=random_choice(constants.FIRST_NAMES),
         last_name=random_choice(constants.LAST_NAMES),
         country=random_choice(constants.COUNTRIES),
+        age=random.randint(constants.AGE_RANGE[0], constants.AGE_RANGE[1]),
     )
 
 
