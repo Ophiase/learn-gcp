@@ -11,7 +11,7 @@ Simple verification of BigQuery setup and authentication.
 uv sync 
 
 # Authenticate with Google Cloud
-uv run gcloud auth application-default login
+gcloud auth application-default login
 
 # Run the main script
 uv run python -m main
