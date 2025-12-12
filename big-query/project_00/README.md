@@ -7,6 +7,15 @@ Simple verification of BigQuery setup and authentication.
 - Run a simple query to retrieve data from the table.
 
 ```bash
-uv sync # To sync the project environment
+# To sync the project environment
+uv sync 
+
+# Authenticate with Google Cloud
+uv run gcloud auth application-default login
+
+# Run the main script
 uv run python -m main
+
+# We recommend you to clean up resources after running the project
+rm ~/.config/gcloud/application_default_credentials.json
 ```
