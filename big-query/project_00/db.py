@@ -1,7 +1,6 @@
 from collections.abc import Sequence
 from typing import Any, Dict, List, Mapping
 from google.cloud import bigquery
-from people import People
 
 
 def client() -> bigquery.Client:
