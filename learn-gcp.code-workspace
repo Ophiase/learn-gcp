@@ -1,10 +1,10 @@
 {
 	"folders": [
 		{
-			"path": "."
+			"path": "big-query/project_00"
 		},
 		{
-			"path": "big-query/project_00"
+			"path": "."
 		}
 	],
 	"settings": {

@@ -1,6 +1,7 @@
-from typing import Dict, List
-
+from collections.abc import Sequence
+from typing import Any, Dict, List, Mapping
 from google.cloud import bigquery
+from people import People
 
 
 def client() -> bigquery.Client:
@@ -39,7 +40,11 @@ def create_table(dataset: str, table: str) -> None:
     client().create_table(table_obj)
 
 
-def insert_rows(dataset: str, table: str, rows: List[Dict[str, str]]) -> None:
+def insert_rows(
+        dataset: str,
+        table: str,
+        rows: Sequence[Mapping[Any, Any]]
+        ) -> None:
     table_id = table_ref(dataset, table)
     client().insert_rows_json(table_id, rows)
 

@@ -1,9 +1,9 @@
 [project]
 name = "project-00"
 version = "0.1.0"
-description = "Add your description here"
+description = "Learn bigquery"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-	"google-cloud-bigquery"
+	"google-cloud-bigquery",
 ]
