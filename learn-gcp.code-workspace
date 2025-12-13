@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "big-query/project_00"
+		}
+	],
+	"settings": {
+		"python.defaultInterpreterPath": "",
+		"python.terminal.activateEnvironment": true,
+		"python.analysis.extraPaths": [
+			"./big-query/project_00",
+		]
+	}
+}
