@@ -1,7 +1,6 @@
 from typing import Dict, List
 
-import data
-import db
+from . import data, db
 
 DATASET = "demo_dataset"
 TABLE = "people"
@@ -33,10 +32,15 @@ def display_result(result: List[Dict]) -> None:
 
 
 def main() -> None:
+    print("Authenticating to the database...")
     db.check_auth()
+    print("Ensuring table exists...")
     ensure_table()
+    print("Loading data into the table...")
     load_data()
+    print("Running sample query...")
     result = show_sample_query()
+    print("Query Results:")
     display_result(result)
 
 

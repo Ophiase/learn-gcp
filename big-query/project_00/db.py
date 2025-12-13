@@ -1,6 +1,9 @@
 from collections.abc import Sequence
 from typing import Any, Dict, List, Mapping
+
 from google.cloud import bigquery
+
+from .secrets import BIG_QUERY_API_KEY
 
 
 def client() -> bigquery.Client:
@@ -9,11 +12,12 @@ def client() -> bigquery.Client:
 
 def check_auth() -> None:
     try:
-        client = bigquery.Client()
+        client = bigquery.Client.from_service_account_info(BIG_QUERY_API_KEY)
         client.project  # Trigger an API call to verify authentication
     except Exception as e:
         raise RuntimeError(
-            "Authentication failed. Please check your Google Cloud credentials.") from e
+            "Authentication failed. Please check your Google Cloud credentials."
+        ) from e
 
 
 def table_ref(dataset: str, table: str) -> str:
@@ -39,11 +43,7 @@ def create_table(dataset: str, table: str) -> None:
     client().create_table(table_obj)
 
 
-def insert_rows(
-        dataset: str,
-        table: str,
-        rows: Sequence[Mapping[Any, Any]]
-        ) -> None:
+def insert_rows(dataset: str, table: str, rows: Sequence[Mapping[Any, Any]]) -> None:
     table_id = table_ref(dataset, table)
     client().insert_rows_json(table_id, rows)
 
