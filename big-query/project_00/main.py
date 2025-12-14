@@ -2,6 +2,7 @@ from typing import Dict, List
 
 from project_00.constants import DATASET
 from project_00.people import PEOPLE_TABLE
+from shared.authentication import check_auth
 
 from . import data, database
 
@@ -38,7 +39,7 @@ def display_result(result: List[Dict]) -> None:
 
 def main() -> None:
     print("Authenticating to the database...")
-    database.check_auth()
+    check_auth()
     print("Ensuring dataset exists...")
     ensure_dataset(DATASET)
     print("Ensuring table exists...")
