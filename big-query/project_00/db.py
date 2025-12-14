@@ -4,6 +4,7 @@ from typing import Any, Dict, List, Mapping
 
 from google.cloud import bigquery
 
+from project_00.constants import DATASET_LOCATION
 from shared.secrets import BIG_QUERY_API_KEY
 
 
@@ -35,9 +36,11 @@ def dataset_exists(dataset: str) -> bool:
         return False
 
 
-def create_dataset(dataset: str) -> None:
-    dataset_obj = bigquery.Dataset(dataset_ref(dataset))
-    get_client().create_dataset(dataset_obj)
+def create_dataset(dataset_name: str) -> None:
+    reference = dataset_ref(dataset_name)
+    dataset = bigquery.Dataset(reference)
+    dataset.location = DATASET_LOCATION
+    get_client().create_dataset(dataset)
 
 
 def table_ref(dataset: str, table: str) -> str:
@@ -69,4 +72,7 @@ def insert_rows(dataset: str, table: str, rows: Sequence[Mapping[Any, Any]]) -> 
 
 
 def run_query(query: str) -> List[Dict]:
-    return list(get_client().query(query).result())
+    client = get_client()
+    job_config = bigquery.QueryJobConfig(location=DATASET_LOCATION)
+    job = client.query(query, job_config=job_config)
+    return list(job.result())
