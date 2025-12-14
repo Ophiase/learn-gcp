@@ -1,5 +1,7 @@
-from google.cloud import bigquery
 import json
+
+from google.cloud import bigquery
+
 from shared.secrets import BIG_QUERY_API_KEY
 
 

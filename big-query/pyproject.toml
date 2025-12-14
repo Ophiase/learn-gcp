@@ -5,3 +5,13 @@ description = "Learn bigquery"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = ["google-cloud-bigquery"]
+
+[tool.black]
+line-length = 88
+
+[tool.isort]
+profile = "black"
+line_length = 88
+
+[dependency-groups]
+dev = ["black", "isort", "pre-commit"]
