@@ -1,34 +1,34 @@
 from typing import Dict, List
 
-from . import data, db
+from project_00.constants import DATASET
+from project_00.people import PEOPLE_TABLE
 
-DATASET = "demo_dataset"
-TABLE = "people"
+from . import data, database
 
 
 def ensure_dataset(dataset: str) -> None:
-    if not db.dataset_exists(dataset):
-        db.create_dataset(dataset)
+    if not database.dataset_exists(dataset):
+        database.create_dataset(dataset)
 
 
 def ensure_table() -> None:
-    if not db.table_exists(DATASET, TABLE):
-        db.create_table(DATASET, TABLE)
+    if not database.table_exists(DATASET, PEOPLE_TABLE):
+        database.create_table(DATASET, PEOPLE_TABLE)
 
 
 def load_data() -> None:
     rows = data.generate_rows(10)
-    db.insert_rows(DATASET, TABLE, rows)
+    database.insert_rows(DATASET, PEOPLE_TABLE, rows)
 
 
 def show_sample_query() -> List[Dict]:
     query = f"""
         SELECT country, COUNT(*) AS total
-        FROM `{db.table_ref(DATASET, TABLE)}`
+        FROM `{database.table_ref(DATASET, PEOPLE_TABLE)}`
         GROUP BY country
         ORDER BY total DESC
     """
-    return db.run_query(query)
+    return database.run_query(query)
 
 
 def display_result(result: List[Dict]) -> None:
@@ -38,7 +38,7 @@ def display_result(result: List[Dict]) -> None:
 
 def main() -> None:
     print("Authenticating to the database...")
-    db.check_auth()
+    database.check_auth()
     print("Ensuring dataset exists...")
     ensure_dataset(DATASET)
     print("Ensuring table exists...")

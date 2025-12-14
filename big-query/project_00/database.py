@@ -4,7 +4,7 @@ from typing import Any, Dict, List, Mapping
 
 from google.cloud import bigquery
 
-from project_00.constants import DATASET_LOCATION
+from shared.constants import DATASET_LOCATION
 from shared.secrets import BIG_QUERY_API_KEY
 
 
@@ -73,6 +73,5 @@ def insert_rows(dataset: str, table: str, rows: Sequence[Mapping[Any, Any]]) -> 
 
 def run_query(query: str) -> List[Dict]:
     client = get_client()
-    job_config = bigquery.QueryJobConfig(location=DATASET_LOCATION)
-    job = client.query(query, job_config=job_config)
+    job = client.query(query)
     return list(job.result())
