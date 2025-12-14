@@ -1,10 +1,10 @@
+import json
 from collections.abc import Sequence
 from typing import Any, Dict, List, Mapping
-import json
 
 from google.cloud import bigquery
 
-from .secrets import BIG_QUERY_API_KEY
+from shared.secrets import BIG_QUERY_API_KEY
 
 
 def get_client() -> bigquery.Client:
