@@ -3,3 +3,5 @@ LAST_NAMES = ["Smith", "Brown", "Taylor", "Lee"]
 COUNTRIES = ["USA", "UK", "France", "Japan"]
 
 AGE_RANGE = (18, 80)
+
+DATASET_LOCATION = "EU"
