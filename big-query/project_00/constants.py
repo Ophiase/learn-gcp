@@ -1,4 +1,4 @@
-DATASET = "demo_dataset"
+DATASET = "dataset_00"
 
 FIRST_NAMES = ["Alice", "Bob", "Charlie", "Diana"]
 LAST_NAMES = ["Smith", "Brown", "Taylor", "Lee"]
