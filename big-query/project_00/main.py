@@ -6,6 +6,11 @@ DATASET = "demo_dataset"
 TABLE = "people"
 
 
+def ensure_dataset(dataset: str) -> None:
+    if not db.dataset_exists(dataset):
+        db.create_dataset(dataset)
+
+
 def ensure_table() -> None:
     if not db.table_exists(DATASET, TABLE):
         db.create_table(DATASET, TABLE)
@@ -34,6 +39,8 @@ def display_result(result: List[Dict]) -> None:
 def main() -> None:
     print("Authenticating to the database...")
     db.check_auth()
+    print("Ensuring dataset exists...")
+    ensure_dataset(DATASET)
     print("Ensuring table exists...")
     ensure_table()
     print("Loading data into the table...")
