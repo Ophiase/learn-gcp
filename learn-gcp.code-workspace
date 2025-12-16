@@ -1,6 +1,9 @@
 {
 	"folders": [
 		{
+			"path": "vertex-ai"
+		},
+		{
 			"path": "big-query"
 		},
 		{
