@@ -1,0 +1,100 @@
+[{
+  "column_name": "stn",
+  "data_type": "STRING"
+}, {
+  "column_name": "wban",
+  "data_type": "STRING"
+}, {
+  "column_name": "date",
+  "data_type": "DATE"
+}, {
+  "column_name": "year",
+  "data_type": "STRING"
+}, {
+  "column_name": "mo",
+  "data_type": "STRING"
+}, {
+  "column_name": "da",
+  "data_type": "STRING"
+}, {
+  "column_name": "temp",
+  "data_type": "FLOAT64"
+}, {
+  "column_name": "count_temp",
+  "data_type": "INT64"
+}, {
+  "column_name": "dewp",
+  "data_type": "FLOAT64"
+}, {
+  "column_name": "count_dewp",
+  "data_type": "INT64"
+}, {
+  "column_name": "slp",
+  "data_type": "FLOAT64"
+}, {
+  "column_name": "count_slp",
+  "data_type": "INT64"
+}, {
+  "column_name": "stp",
+  "data_type": "FLOAT64"
+}, {
+  "column_name": "count_stp",
+  "data_type": "INT64"
+}, {
+  "column_name": "visib",
+  "data_type": "FLOAT64"
+}, {
+  "column_name": "count_visib",
+  "data_type": "INT64"
+}, {
+  "column_name": "wdsp",
+  "data_type": "STRING"
+}, {
+  "column_name": "count_wdsp",
+  "data_type": "STRING"
+}, {
+  "column_name": "mxpsd",
+  "data_type": "STRING"
+}, {
+  "column_name": "gust",
+  "data_type": "FLOAT64"
+}, {
+  "column_name": "max",
+  "data_type": "FLOAT64"
+}, {
+  "column_name": "flag_max",
+  "data_type": "STRING"
+}, {
+  "column_name": "min",
+  "data_type": "FLOAT64"
+}, {
+  "column_name": "flag_min",
+  "data_type": "STRING"
+}, {
+  "column_name": "prcp",
+  "data_type": "FLOAT64"
+}, {
+  "column_name": "flag_prcp",
+  "data_type": "STRING"
+}, {
+  "column_name": "sndp",
+  "data_type": "FLOAT64"
+}, {
+  "column_name": "fog",
+  "data_type": "STRING"
+}, {
+  "column_name": "rain_drizzle",
+  "data_type": "STRING"
+}, {
+  "column_name": "snow_ice_pellets",
+  "data_type": "STRING"
+}, {
+  "column_name": "hail",
+  "data_type": "STRING"
+}, {
+  "column_name": "thunder",
+  "data_type": "STRING"
+}, {
+  "column_name": "tornado_funnel_cloud",
+  "data_type": "STRING"
+}]

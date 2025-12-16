@@ -1,0 +1,94 @@
+[{
+  "column_name": "station_number",
+  "data_type": "INT64"
+}, {
+  "column_name": "wban_number",
+  "data_type": "INT64"
+}, {
+  "column_name": "year",
+  "data_type": "INT64"
+}, {
+  "column_name": "month",
+  "data_type": "INT64"
+}, {
+  "column_name": "day",
+  "data_type": "INT64"
+}, {
+  "column_name": "mean_temp",
+  "data_type": "FLOAT64"
+}, {
+  "column_name": "num_mean_temp_samples",
+  "data_type": "INT64"
+}, {
+  "column_name": "mean_dew_point",
+  "data_type": "FLOAT64"
+}, {
+  "column_name": "num_mean_dew_point_samples",
+  "data_type": "INT64"
+}, {
+  "column_name": "mean_sealevel_pressure",
+  "data_type": "FLOAT64"
+}, {
+  "column_name": "num_mean_sealevel_pressure_samples",
+  "data_type": "INT64"
+}, {
+  "column_name": "mean_station_pressure",
+  "data_type": "FLOAT64"
+}, {
+  "column_name": "num_mean_station_pressure_samples",
+  "data_type": "INT64"
+}, {
+  "column_name": "mean_visibility",
+  "data_type": "FLOAT64"
+}, {
+  "column_name": "num_mean_visibility_samples",
+  "data_type": "INT64"
+}, {
+  "column_name": "mean_wind_speed",
+  "data_type": "FLOAT64"
+}, {
+  "column_name": "num_mean_wind_speed_samples",
+  "data_type": "INT64"
+}, {
+  "column_name": "max_sustained_wind_speed",
+  "data_type": "FLOAT64"
+}, {
+  "column_name": "max_gust_wind_speed",
+  "data_type": "FLOAT64"
+}, {
+  "column_name": "max_temperature",
+  "data_type": "FLOAT64"
+}, {
+  "column_name": "max_temperature_explicit",
+  "data_type": "BOOL"
+}, {
+  "column_name": "min_temperature",
+  "data_type": "FLOAT64"
+}, {
+  "column_name": "min_temperature_explicit",
+  "data_type": "BOOL"
+}, {
+  "column_name": "total_precipitation",
+  "data_type": "FLOAT64"
+}, {
+  "column_name": "snow_depth",
+  "data_type": "FLOAT64"
+}, {
+  "column_name": "fog",
+  "data_type": "BOOL"
+}, {
+  "column_name": "rain",
+  "data_type": "BOOL"
+}, {
+  "column_name": "snow",
+  "data_type": "BOOL"
+}, {
+  "column_name": "hail",
+  "data_type": "BOOL"
+}, {
+  "column_name": "thunder",
+  "data_type": "BOOL"
+}, {
+  "column_name": "tornado",
+  "data_type": "BOOL"
+}]
