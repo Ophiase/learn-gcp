@@ -17,9 +17,11 @@ SELECT
   g.mean_temp,
   (g.mean_temp - s.mu) / s.sigma z_score
 FROM
-  `bigquery-public-data.sample.gsod` g
+  `bigquery-public-data.samples.gsod` g
   JOIN stats s USING (year)
 WHERE
   ABS((g.mean_temp - s.mu) / s.sigma) > 3
 ORDER BY
-  z_score DESC;
+  z_score DESC
+LIMIT
+  10;

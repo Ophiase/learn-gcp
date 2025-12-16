@@ -13,8 +13,8 @@ class QueryConfig:
 
 QUERIES: List[QueryConfig] = [
     QueryConfig("extreme weather frequency by year", "extreme_weather_frequency_by_year.sql"),
-    # QueryConfig("filter and aggregation", "filter_and_aggregation.sql"),
-    # QueryConfig("weather anomaly detection", "weather_anomaly_detection.sql")
+    QueryConfig("filter and aggregation", "filter_and_aggregation.sql"),
+    QueryConfig("weather anomaly detection", "weather_anomaly_detection.sql")
 ]
 
 def execute_a_single_query(
