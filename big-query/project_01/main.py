@@ -1,7 +1,9 @@
 from shared.authentication import check_auth, get_client
+
 from .queries import execute_queries
 
 DRY_RUN = False
+
 
 def main() -> None:
     print("Authenticating with Google Cloud...")
