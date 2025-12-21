@@ -1,9 +1,9 @@
+import tomllib
 from dataclasses import fields
 from email.policy import default
 from logging import config
-import tomllib
 from pathlib import Path
-from typing import List, Optional, Any
+from typing import Any, List, Optional
 
 CONFIG_PATH = Path("secrets/secrets.toml")
 
@@ -39,6 +39,7 @@ def load_vertex_ai_api_key() -> str:
     path = get_api_key_path(config)
     return read_secret(path)
 
+
 # ---
 
 
@@ -47,7 +48,5 @@ DEFAULT_LOCATION = "us-central1"
 DEFAULT_PROJECT_ID = None
 
 VERTEX_AI_API_KEY: str = load_vertex_ai_api_key()
-LOCATION: str = get_field_str(
-    ["project", "location"], DEFAULT_LOCATION)
-PROJECT_ID: str = get_field_str(
-    ["project", "project_id"], DEFAULT_PROJECT_ID)
+LOCATION: str = get_field_str(["project", "location"], DEFAULT_LOCATION)
+PROJECT_ID: str = get_field_str(["project", "project_id"], DEFAULT_PROJECT_ID)
