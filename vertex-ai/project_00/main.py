@@ -31,7 +31,9 @@ def main() -> None:
     init_vertex()
     print(f"\nLoading model '{MODEL_NAME}'...")
     model = load_model(MODEL_NAME)
-    prompt = "Say hello in one sentences (like a hobbit that warn you about the red sky)."
+    prompt: str = (
+        "Say hello in one sentences (like a hobbit that warn you about the red sky)."
+    )
     print(f"\nGenerating response from model '{MODEL_NAME}'...")
     response = generate(model, prompt)
     display(response)
