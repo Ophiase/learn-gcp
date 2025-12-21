@@ -14,7 +14,8 @@
 		"python.defaultInterpreterPath": "",
 		"python.terminal.activateEnvironment": true,
 		"python.analysis.extraPaths": [
-			"./big-query/project_00",
+			"./big-query",
+			"./vertex-ai",
 		]
 	}
 }
