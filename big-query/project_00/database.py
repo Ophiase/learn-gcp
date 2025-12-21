@@ -6,7 +6,6 @@ from google.cloud import bigquery
 
 from shared.authentication import get_client
 from shared.constants import DATASET_LOCATION
-from shared.secrets import BIG_QUERY_API_KEY
 
 
 def dataset_ref(dataset: str) -> str:

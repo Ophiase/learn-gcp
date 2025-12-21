@@ -13,6 +13,10 @@ This project demonstrates how to use Google Cloud Vertex AI with Python.
 ```bash
 [paths]
 api_key_path = "/path/to/keyfile.json" 
+
+[project]
+project_id = "your-gcp-project-id"
+location = "your-gcp-location" # e.g. us-central1, europe-west9 (paris)
 ```
 
 5. Run the project ``project_xx`` of your choice:
