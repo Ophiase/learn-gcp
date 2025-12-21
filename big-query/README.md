@@ -4,13 +4,15 @@ This project demonstrates how to use Google Cloud BigQuery with Python.
 
 Projects
 - [Project 00: BigQuery Setup Verification](./project_00)
+- [Project 01: BigQuery queries](./project_01)
 
 ## Quickstart
 
+0. Enable the BigQuery API
 1. Create a service account on GCP with the following roles:
-    - BigQuery Jobs User
-    - BigQuery Data Viewer
-    - BigQuery Data Editor
+    - `BigQuery Jobs User`
+    - `BigQuery Data Viewer`
+    - `BigQuery Data Editor`
 2. Download the service account key as a JSON file
 3. (Optional, Dockerized) Mount the key file to the container
 4. Write the path to the key file in `secrets/secrets.toml` as follows:
