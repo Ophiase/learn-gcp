@@ -47,6 +47,7 @@ DEFAULT_API_KEY_PATH = Path("/etc/secrets/vertex-ai.json")
 DEFAULT_LOCATION = "us-central1"
 DEFAULT_PROJECT_ID = None
 
+VERTEX_AI_API_FILE_PATH: Path = get_api_key_path(load_toml(CONFIG_PATH))
 VERTEX_AI_API_KEY: str = load_vertex_ai_api_key()
 LOCATION: str = get_field_str(["project", "location"], DEFAULT_LOCATION)
 PROJECT_ID: str = get_field_str(["project", "project_id"], DEFAULT_PROJECT_ID)

@@ -4,12 +4,13 @@ from google.oauth2 import service_account
 import vertexai
 from google.cloud.aiplatform_v1.services.model_service import ModelServiceClient
 
-from shared.secrets import PROJECT_ID, LOCATION, VERTEX_AI_API_KEY
+from shared.secrets import PROJECT_ID, LOCATION, VERTEX_AI_API_FILE_PATH
 
 
 def get_credentials() -> service_account.Credentials:
-    info = json.loads(VERTEX_AI_API_KEY)
-    return service_account.Credentials.from_service_account_info(info)
+    # info = json.loads(VERTEX_AI_API_KEY)
+    # return service_account.Credentials.from_service_account_info(info)
+    return service_account.Credentials.from_service_account_file(VERTEX_AI_API_FILE_PATH)
 
 
 def init_vertex() -> None:
